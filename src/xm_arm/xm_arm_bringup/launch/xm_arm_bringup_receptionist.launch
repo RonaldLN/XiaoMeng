@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="xm_arm_serial" name="xm_arm_serial_receptionist" type="xm_arm_serial_receptionist.py" output="screen"/>
+    <include file="$(find xm_arm_controller)/launch/xm_arm_controller.launch"/>
+
+    <include file="$(find xm_moveit_config)/launch/demo.launch"/>
+
+
+</launch>

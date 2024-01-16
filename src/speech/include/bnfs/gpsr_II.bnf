@@ -1,0 +1,46 @@
+﻿#BNF+IAT 1.0 UTF-8;
+/*
+Attention:
+1.the tokens in the slot must be simply parallel,no complicated rules like "()","[]","<>"
+2.the num of rule |,such as:<rule0>|<rule1>|<rule2> is OK,too many is illegal,then make them in slot (segmentation fault)
+3.23108
+*/
+!grammar GPSR;
+!slot <genderandgesture>;
+!slot <vbdeliver>;
+!slot <vbfind>;
+!slot <vbgoto>;
+!slot <vbtake>;
+!slot <vbspeak>;
+!slot <room>;
+!slot <placement>;
+!slot <pername>;
+!slot <object>;
+
+
+!start <root>;
+
+<root>:<vbgoto> "the" <room> "and" <vbfind> "a person and" <vbspeak> (<pgender> | <pgesture>) |
+<vbfind> "a person in the" <room> "and" <vbspeak> (<pgender> | <pgesture>) |
+<vbtake> "the" ( "cloth" | "tray" | "bowl" ) "in the" <placement> "and" <vbdeliver> "it to" <target> |
+"count the" (<object> "at the" <placement> | <people> "at the" <room>) "and report to" <target1> |
+( "go" | "navigate" ) "to the" (<placement> "and count the" <object> | <room> "and count the" <people>) "and report to" <target1> |
+"tell" <target> "how many" (<object> "are in the" <placement> | <people> "are in the" <room>);
+
+<target>:<pername> ( "at" | "in" | "which is in" ) "the" <room> | "the" <placement> | "me";
+<target1>:<pername> ( "at" | "in" | "which is in" ) "the" <room> | "me";
+<pgender>:"if the person is" ( "male or female" | "man or woman" | "boy or girl") | "the" ( "sex" | "gender" ) "of that person";
+<pgesture>:( "what" | "which" ) "gesture is" ( "doing" | "performing" ) "that person" | "the gesture of that person";
+<people>:[<genderandgesture>] "people";
+
+<genderandgesture>:"male" | "female" | "waving" | "rising left arm" | "rising right arm" | "pointing left" | "pointing right";
+<vbdeliver>: "bring" | "carry" | "deliver" | "take";
+<vbfind>:"find" | "look for";
+<vbgoto>:"go to" | "navigate to" | "reach" | "get into";
+<vbtake>:"take" | "grasp" | "get";
+<vbspeak>:"tell" | "say" | "speak";
+
+<room>:"kitchen"|"living room"|"dining room";
+<placement>:"fridge"|"kitchen table"|"kitchen counter"|"cooking bench"|"couch table"|"sofa"|"bookcase"|"dining table"|"cupboard";
+<pername>:"Adam"|"Daniel"|"Fisher"|"Michael"|"Jack"|"John"|"Mary"|"Tom"|"Kevin"|"Rose";
+<object>:"milk"|"cola"|"water"|"lemon tea"|"green tea"|"toothpaste"|"napkins"|"tea"|"apple"|"lemon"|"biscuits"|"chips"|"chocolates"|"objects";

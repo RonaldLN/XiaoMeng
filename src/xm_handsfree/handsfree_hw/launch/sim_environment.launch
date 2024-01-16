@@ -1,0 +1,17 @@
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro $(find xm_description)/urdf/xm.urdf.xacro" />
+
+    <!-- 王：原则上，运行该 launch 文件，则可以在打开 RViz 后，使用自己搭建的虚拟环境进行仿真调试，但是此时为 ubuntu 18.04, gazebo 的版本较低
+        同时，由于快要比赛，未进行 gazebo 的更新，因此无法正常运行该launch文件，甚至直接运行
+        roslaunch gazebo_ros empty_world.launch 都会报错，因此后续可以更新 gazebo 后重新尝试。 -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find handsfree_hw)/worlds/box_house.world" />
+    </include>
+
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_model" args="-urdf -model xm_robot -param robot_description" />
+
+    <!-- 此 rviz 中为启动已保存的 rviz 配置文件，需要自行配置 
+        args=$(find xx)/xxx.rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" />
+
+</launch>

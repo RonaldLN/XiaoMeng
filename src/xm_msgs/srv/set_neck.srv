@@ -1,0 +1,6 @@
+float32 setNeck0	#俯仰
+float32 setNeck1	#水平
+
+---
+
+bool state

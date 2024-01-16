@@ -1,0 +1,27 @@
+<launch>
+  <!-- Arguments -->
+ 
+  <arg name="cmd_vel_topic" default="/cmd_vel" />
+  <arg name="odom_topic" default="odom" />
+  <arg name="move_forward_only" default="false"/>
+    
+  <!-- move_base -->
+  <!--node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen"-->
+<node pkg="move_base" type="move_base" respawn="true" name="move_base" launch-prefix="xterm -e" clear_params="true">	<!--launch-prefix="xterm -e" -->
+    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
+    <param name="use_dijkstra" value="true"/>
+    <param name="footprint_padding" value="0.05" /> 
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+
+    <rosparam file="$(find xm_2dnav)/move_base_config/test_dwa/costmap_common_params_burger.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find xm_2dnav)/move_base_config/test_dwa/costmap_common_params_burger.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find xm_2dnav)/move_base_config/test_dwa/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find xm_2dnav)/move_base_config/test_dwa/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find xm_2dnav)/move_base_config/test_dwa/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find xm_2dnav)/move_base_config/test_dwa/move_base_params.yaml" command="load" />
+    <rosparam file="$(find xm_2dnav)/move_base_config/test_dwa/dwa_local_planner_params_burger.yaml" command="load" />
+    <remap from="/cmd_vel" to="/mobile_base/mobile_base_controller/cmd_vel"/>
+    <remap from="/odom"    to="/mobile_base/mobile_base_controller/odom"/>
+  </node>
+  
+</launch>

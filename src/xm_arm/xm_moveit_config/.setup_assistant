@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: xm
+    relative_path: urdf/xm.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/xm.srdf
+  CONFIG:
+    author_name: csy
+    author_email: csy@qq.com
+    generated_timestamp: 1696685890

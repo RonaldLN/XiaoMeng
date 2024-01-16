@@ -1,0 +1,54 @@
+#代价地图通用配置文件，作用于全局路径和局部路径
+
+#2.5米范围内的障碍物在地图中有效？
+obstacle_range: 2.5   ####2.5
+#3.0米范围外的障碍物在地图中清除？
+raytrace_range: 3.0
+
+#footprint: [[0.22,0.27],[0.22,-0.27],[-0.35,-0.20],[-0.35,0.20]]
+#[[0.11, -0.26], [0.11, 0.26], [-0.40, 0.26], [-0.40, -0.26]]
+#[[-0.37,0.202],[0.054,0.202],[0.054,0.03],[0.09,0.03],[0.09,-0.03],[0.054,-0.03],[0.054,-0.202],[-0.37,-0.202]]
+# 通过这几个按顺时针顺序排列的坐标，以里程计中心为圆心，勾勒出机器人底盘的外形   
+#如果底盘轮廓太小仅仅只是贴合机器人的话，会十分容易撞墙，在一定范围内加大底盘膨胀半径和障碍物膨胀半径都没用
+robot_radius: 0.28 #0.26
+footprint_inflation: 0.02
+# 底盘膨胀半径
+inflation_radius: 0.1  #############0.1
+# 障碍物的膨胀半径
+max_obstacle_height: 0.6
+min_obstacle_height: 0.0
+
+# cost_scaling_factor: 5.0
+# cost_scaling_factor: 2.58
+# resolution: 0.02
+shutdown_costmaps: true
+
+clearing_rotation_allowed: true
+
+# 代价地图更新的所有数据来源
+observation_sources: scan
+scan: {data_type: LaserScan, topic: /scan_deal, marking: true, clearing: true, inf_is_valid: true,expected_update_rate: 0}
+
+#################################################################
+
+obstacle_layer:
+  enabled: true
+  obstacle_range: 2.5
+  raytrace_range: 3.0
+  inflation_radius: 0.35 #0.35减小后容易撞墙
+#  lethal_cost_threshold: 100 #+++
+  track_unknown_space: true
+  combination_method: 1
+
+  observation_sources: laser_scan_sensor
+  laser_scan_sensor: {data_type: LaserScan, topic: /scan_deal, marking: true, clearing: true}
+
+inflation_layer:
+  enabled:              true
+  cost_scaling_factor:  25.0  #exponential rate at which the obstacle cost drops off (default: 10)  #增大可以加强跨越房间能力#15 25
+  inflation_radius:     1.0  # distance from an obstacle at which costs are incurred for planning paths.这个非常重要，影响全局路径规划以及可以到达的区域 1.0
+  inflate_unknown: false #是否膨胀未知区域
+
+static_layer:
+  enabled:              true
+  map_topic:            "/map"

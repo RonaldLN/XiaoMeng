@@ -1,0 +1,4 @@
+本周主要在安装ubuntu18.04
+重新看了一遍hands_free的代码，了解了上下位机之间通信方法，通信过程中传递的参数。
+由于更新系统到ubuntu18，movebase使用的是melodic版本，需要增添一些东西才能实现具体的需求。
+下周的任务是看完navigation包中的代码，并成功修改movebase中的代码。

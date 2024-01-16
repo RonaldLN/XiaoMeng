@@ -1,0 +1,6 @@
+string object_name1
+string object_name2
+string object_name3
+---
+string object_name
+geometry_msgs/PointStamped pos

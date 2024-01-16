@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/rainney/catkin_ws/src/handsfree_hw/build/devel/setup.sh

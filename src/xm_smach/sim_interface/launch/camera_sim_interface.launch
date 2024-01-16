@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="sim_interface" name="sim_follow" type="follow.py" output="screen">
+	</node>
+	<node pkg="sim_interface" name="sim_get_position" type="get_position.py" output="screen">
+	</node>
+</launch>

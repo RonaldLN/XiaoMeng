@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="sim_interface" name="sim_interface" type="get_position.py" output="screen">
+	</node>
+</launch>

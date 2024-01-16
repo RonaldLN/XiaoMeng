@@ -1,0 +1,7 @@
+image: /home/rainney/catkin_ws_2020/src/xm_navigation/xm_2dnav/map2/.pgm
+resolution: 0.050000
+origin: [-5.325354, -4.244640, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

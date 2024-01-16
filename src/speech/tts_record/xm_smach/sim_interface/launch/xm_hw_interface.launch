@@ -1,0 +1,9 @@
+<launch>
+
+	<include file="$(find xm_arm_sim_hw)/launch/xm_arm_sim_hw.launch"/>
+	<node pkg="sim_interface" name="sim_sound_source" type="soundsource.py" output="screen">
+	</node>
+	<include file="$(find sim_interface)/launch/move_base_sim.launch"/>
+
+
+</launch>

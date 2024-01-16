@@ -1,0 +1,11 @@
+int32 people_id
+---
+geometry_msgs/PointStamped pos1
+geometry_msgs/PointStamped pos2
+geometry_msgs/PointStamped pos3
+geometry_msgs/PointStamped pos4
+int32 state1
+int32 state2
+int32 state3
+int32 state4
+

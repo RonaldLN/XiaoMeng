@@ -1,0 +1,43 @@
+<launch>
+    <!-- 打开晓萌URDF模型 -->
+    <!-- <param name="robot_description" textfile="$(find xm_description)/urdf/xm.urdf" /> -->
+    <param name="robot_description" textfile="$(find handsfree_hw)/URDF/xm/urdf/xm.urdf" />
+
+
+    <!-- 打开 gampping 节点 -->
+    <include file="$(find handsfree_hw)/launch/gmapping_rplidar.launch" />
+
+    <!-- 打开RViz -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find handsfree_hw)/rviz/dwa_astar.rviz" />
+
+    <include file="$(find handsfree_hw)/launch/xm_controller.xml"/>
+
+    <!-- 发布 base_footprint 到 base_link 的坐标转换 -->
+    <node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster" args="0 0 0 0 0 0 1 base_footprint base_link 100" />
+
+    <!-- 启动雷达节点 -->
+    <include file="$(find rplidar_ros)/launch/rplidar_a3.launch"/>
+
+    <include file="$(find base_server)/launch/xm_base_server.xml"/>
+
+    <include file="$(find laser_filters)/examples/box_filter_example.launch"/>
+
+    <node name="handsfree_hw_node" pkg="handsfree_hw" type="handsfree_hw_node" output="screen" >
+        <param name="sim_xm" type="bool" value="false" />
+        <param name="controller_freq_" type="double" value="100.0" />
+    </node>
+
+    <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager" />
+  	<node pkg="nodelet" type="nodelet" name="velocity_smoother" args="load xm_velocity_smoother/VelocitySmootherNodelet nodelet_manager" output="screen">
+        <rosparam file="$(find xm_velocity_smoother)/param/standalone.yaml" command="load"/>
+	    <remap from="velocity_smoother/raw_cmd_vel" to="/mobile_base/mobile_base_controller/cmd_vel"/>
+        <remap from="velocity_smoother/smooth_cmd_vel" to="/mobile_base/mobile_base_controller/smooth_cmd_vel"/>
+        <remap from="/velocity_smoother/odometry" to="/mobile_base/mobile_base_controller/odom"/>
+    </node>
+
+    <!-- 打开 move_base 节点 -->
+
+    <include file="$(find xm_2dnav)/move_base_config/amcl_node.xml"/>
+    <include file="$(find xm_2dnav)/move_base_config/dwa_astar/move_base.xml"/>
+
+</launch>

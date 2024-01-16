@@ -1,0 +1,8 @@
+from pydub import AudioSegment#音频预处理
+from pydub.playback import play#用于播放音频
+
+
+
+
+record=AudioSegment.from_wav("/home/xm/catkin_ws/src/speech/smach_tts_record/???.wav")
+play(record)

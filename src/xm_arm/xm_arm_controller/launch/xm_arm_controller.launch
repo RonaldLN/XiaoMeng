@@ -1,0 +1,9 @@
+
+<launch>
+	<node pkg="xm_arm_controller" name="arm_controller" type="arm_controller.py" output="screen">
+	</node>
+	<node pkg="xm_arm_controller" name="gripper_controller" type="gripper_controller.py" output="screen">
+	</node>
+	<node pkg="xm_arm_controller" name="plat_controller" type="plat_controller.py" output="screen">
+	</node>
+</launch>

@@ -1,0 +1,50 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/xm/carto_ws/install_isolated/include/**",
+        "/home/xm/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/amcl/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/base_local_planner/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/base_server/include/**",
+        "/home/xm/catkin_ws/src/xm_handsfree/base_simple_controller/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/carrot_planner/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/clear_costmap_recovery/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/costmap_2d/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/dwa_local_planner/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/global_planner/include/**",
+        "/home/xm/catkin_ws/src/xm_handsfree/handsfree_hw/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/laser_filters/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/map_server/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/move_base/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/move_slow_and_clear/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/nav_core/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/navfn/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/openslam_gmapping/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/range_sensor_layer/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/robot_pose_ekf/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/rotate_recovery/include/**",
+        "/home/xm/catkin_ws/src/speech/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/navigation/voxel_grid/include/**",
+        "/home/xm/catkin_ws/src/xm_arm/xm_arm_controller/include/**",
+        "/home/xm/catkin_ws/src/xm_arm/xm_arm_nav/include/**",
+        "/home/xm/catkin_ws/src/xm_arm/xm_arm_serial/include/**",
+        "/home/xm/catkin_ws/src/xm_arm/xm_arm_sim_hw/include/**",
+        "/home/xm/catkin_ws/src/xm_navigation/xm_velocity_smoother/include/**",
+        "/home/xm/catkin_ws/src/xm_vision/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

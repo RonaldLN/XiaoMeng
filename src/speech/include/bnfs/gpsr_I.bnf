@@ -1,0 +1,60 @@
+﻿#BNF+IAT 1.0 UTF-8;
+/*
+Attention:
+1.the tokens in the slot must be simply parallel,no complicated rules like "()","[]","<>"
+*/
+!grammar GPSR;
+
+!slot <drink>;
+
+!start <root>;
+<root>:
+<drink>|
+"my favourite drink is" <drink>|
+"I like" <drink>;
+
+//<per>:"alex"|"charlie"|"elizabeth"|"francis"|"jennifer"|"linda"|"mary"|"patricia"|"robin"|"skyler"|"james"|"john"|"michael"|"robert"|"william";
+<drink>:"chocolate drink"|"coke"|"grape juice"|"orange juice"|"sprite"|"milk";
+/*
+!grammar GPSR;
+!slot <vbdeliver>;
+!slot <vbfind>;
+!slot <vbfollow>;
+!slot <vbgoto>;
+!slot <vbtake>;
+!slot <vbspeak>;
+!slot <room>;
+!slot <placement>;
+!slot <pername>;
+!slot <object>;
+!slot <time>;
+!slot <name>;
+
+
+!start <root>;
+
+<root>:<vbfind> "a person and" (<talk> | <follow> )|
+<vbtake> "the" <object> "from the" <placement> "and" <vbdeliver> "it to" <target>|
+<vbgoto> "the" <room> "and" <vbfind> "the" <object>|
+<vbfind> "a person in the" <room> "and" <talk>;
+
+<talk>:<vbspeak> (<time> | <date> | <name>) | "answer a question";
+<target>:<pername> ("at" | "in" | "which is in") "the" <room>|"the" <placement>|"me";
+<follow>:<vbfollow> "her to the" <room>;
+
+<vbdeliver>:"bring"|"carry"|"deliver"|"take";
+<vbfind>:"find"|"look for";
+<vbfollow>:"follow";
+<vbgoto>:"go to"|"navigate to"|"reach"|"get into";
+<vbtake>:"take"|"grasp"|"get";
+<vbspeak>:"tell"|"say"|"speak";
+
+<room>:"kitchen"|"living room"|"dining room";
+<placement>:"fridge"|"kitchen table"|"kitchen counter"|"cooking bench"|"couch table"|"sofa"|"bookcase"|"dining table"|"cupboard";
+<pername>:"Adam"|"Daniel"|"Fisher"|"Michael"|"Jack"|"John"|"Mary"|"Tom"|"Kevin"|"Rose";
+<object>:"milk"|"cola"|"water"|"lemon tea"|"green tea"|"toothpaste"|"napkins"|"tea"|"apple"|"lemon"|"biscuits"|"chips"|"chocolates";
+<time>:"the time"|"what time is it";
+<date>:"the date"|"what day is" ("today" | "tomorrow")|"the day of the" ("month" | "week");
+<name>:"your name"|"the name of your team";
+*/
+

@@ -1,0 +1,414 @@
+<robot
+  name="xm第七代总装配体（URDF）">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.489097572622825 -0.59372103940394 0.462040417262451"
+        rpy="0 0 0" />
+      <mass
+        value="17.2460066778055" />
+      <inertia
+        ixx="1.88740577095147"
+        ixy="-4.43352918509283E-05"
+        ixz="0.00109835912427862"
+        iyy="1.79184074115952"
+        iyz="-0.254620558104109"
+        izz="0.235803483019318" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lifter">
+    <inertial>
+      <origin
+        xyz="0.00905830802200747 8.3876239287406E-12 0.0300394754094985"
+        rpy="0 0 0" />
+      <mass
+        value="2.50920779072553" />
+      <inertia
+        ixx="0.00359142383983213"
+        ixy="3.26920646741699E-13"
+        ixz="0.00239977941772027"
+        iyy="0.00496976953704836"
+        iyz="-7.71377963893694E-13"
+        izz="0.00430384689322109" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/lifter.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/lifter.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointlifter"
+    type="prismatic">
+    <origin
+      xyz="0.488982232618116 -0.775837239264455 -0.604964078623166"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lifter" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="waist">
+    <inertial>
+      <origin
+        xyz="-0.0039245327994385 -0.0291786343972952 -0.0413610811867532"
+        rpy="0 0 0" />
+      <mass
+        value="2.20436123199609" />
+      <inertia
+        ixx="0.0266114259873715"
+        ixy="-0.000112387668853395"
+        ixz="-0.00083889879016608"
+        iyy="0.0246498410366619"
+        iyz="-0.00756694855600751"
+        izz="0.00757197972347619" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/waist.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/waist.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointwaist"
+    type="continuous">
+    <origin
+      xyz="0.102000000001598 0 0.263999999996643"
+      rpy="1.01470201095702E-15 2.71997249245633E-15 1.87167757799686" />
+    <parent
+      link="lifter" />
+    <child
+      link="waist" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="arm1">
+    <inertial>
+      <origin
+        xyz="0.00412647265967486 -0.123158313732134 0.0357074821829999"
+        rpy="0 0 0" />
+      <mass
+        value="0.604298573899742" />
+      <inertia
+        ixx="0.00637602462480068"
+        ixy="0.000326192664560056"
+        ixz="-0.000253648287159305"
+        iyy="0.0012015588515263"
+        iyz="-0.00127137660063608"
+        izz="0.00528789849764722" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/arm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0.0504999999999997 -0.115000000000013 0.0799999999999894"
+      rpy="1.5707963267949 -0.024567120643176 -1.5707963267949" />
+    <parent
+      link="waist" />
+    <child
+      link="arm1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="arm2">
+    <inertial>
+      <origin
+        xyz="0.188109076702319 -0.289564670032462 0.00557933031071578"
+        rpy="0 0 0" />
+      <mass
+        value="0.491459902665016" />
+      <inertia
+        ixx="0.000603697047912428"
+        ixy="0.000579589082889871"
+        ixz="0.000375641539910479"
+        iyy="0.00248446302644206"
+        iyz="5.77268394552605E-05"
+        izz="0.00222120017764587" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0.229945645751417 0.00499999999986112 0.080999999999994"
+      rpy="3.92215773343108E-15 7.32281876174506E-15 -0.976166179071457" />
+    <parent
+      link="arm1" />
+    <child
+      link="arm2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="arm3">
+    <inertial>
+      <origin
+        xyz="-0.250472715387169 -0.087127466093642 0.0308390311295155"
+        rpy="0 0 0" />
+      <mass
+        value="0.149175192169896" />
+      <inertia
+        ixx="0.000179413878104542"
+        ixy="-5.95236412183148E-05"
+        ixz="-8.24148924216316E-06"
+        iyy="0.000143709394455768"
+        iyz="4.30456384757741E-07"
+        izz="0.000125103844067426" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="0.191999999999827 0 0.00900000000000112"
+      rpy="-6.71946093041071E-15 3.34103894472615E-15 1.57193802585616" />
+    <parent
+      link="arm2" />
+    <child
+      link="arm3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="wrist">
+    <inertial>
+      <origin
+        xyz="-0.159850269606044 0.0798569064202699 -0.292178907804718"
+        rpy="0 0 0" />
+      <mass
+        value="0.237747540719521" />
+      <inertia
+        ixx="8.40256433674601E-05"
+        ixy="-3.16289290739745E-05"
+        ixz="-9.67295784657749E-05"
+        iyy="0.000211554466025788"
+        iyz="2.38608025691662E-05"
+        izz="0.000149438155242016" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/wrist.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/wrist.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointwrist"
+    type="continuous">
+    <origin
+      xyz="0.0940000000000065 0 -0.0340000000000042"
+      rpy="1.5707963267949 -1.3824560015148E-17 1.57079632679493" />
+    <parent
+      link="arm3" />
+    <child
+      link="wrist" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="claw">
+    <inertial>
+      <origin
+        xyz="0.281050454273311 0.13184949256189 -0.246929245190781"
+        rpy="0 0 0" />
+      <mass
+        value="0.130181133645935" />
+      <inertia
+        ixx="0.000220648599796943"
+        ixy="8.94100324850132E-06"
+        ixz="5.60651917790724E-05"
+        iyy="0.000148942244342991"
+        iyz="-1.87322724528743E-05"
+        izz="0.000133580915457021" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/claw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xm第七代总装配体（URDF）/meshes/claw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointclaw"
+    type="continuous">
+    <origin
+      xyz="0.0272301941961566 0.00384272351864462 0.0450199989576792"
+      rpy="1.59274067744886 1.57079631189374 1.73620530148606" />
+    <parent
+      link="wrist" />
+    <child
+      link="claw" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>

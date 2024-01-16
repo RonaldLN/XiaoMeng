@@ -1,0 +1,4 @@
+在livingroom找东西，原点不能设置在livingroom了
+每个房间会有多个点，比赛前标点时应该根据点的数量在gpsr_target中增加新的点
+take the napkins from the dining table and take it to frances in the kitchen 这句命令有问题，不能go frances，应该find，而且应该diliver
+

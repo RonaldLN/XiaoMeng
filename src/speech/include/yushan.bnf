@@ -1,0 +1,51 @@
+#BNF+IAT 1.0 UTF-8;
+/*
+Attention:
+1.the longer sentence,the more difficult to recognize,such as:how many in the dining room
+2.it's better to divide the sentence to smaller,such as:how many,in the,dining room
+3.the ruleExpansion is long,will be an error,such as:what was the last question
+4.#BNF+IAT VersionNumber CharEncoding must be in first line
+5.the sentence is shorter,the distance between voice and microphone will be longer in the same volume
+6.the num of rule |,such as:<rule0>|<rule1>|<rule2> is OK,too many is illegal
+*/
+
+!grammar try;
+!slot <Q>;
+
+!start <speak>;
+
+<speak>:<GPSR>|<YesOrNo>;
+
+<GPSR>:<findprs>" in the "<room>" and " (<talk>|<follow>)|
+<goroom>" and "<findobj>|
+<goroom>" and "<findprs>" and " (<talk>|<follow>)|
+<vbtake>(" the "|" a "|" an ") <object> " from the " <room>" and " (" bring " | " carry " | " deliver "|" take ") " it to "<target>;
+
+<follow>:" follow "("her"|"him")" to the" <room>|" follow "("her"|"him");
+<goroom>:<vbgoto>" the "<room>;
+<findprs>:<vbfind><personname>|<vbfind> " a person "|<vbfind> " the calling person ";
+<personname>:"Adam"|"Daniel"|"Fisher"|"Michael"|"Jack"|"John"|"Mary"|"Tom"|"Kevin"|"Rose";
+<findobj>:<vbfind> (" the "|" a "|" an ") <object>;
+
+<vbgoto>:" go to "|" navigate to "|" reach "|" get into ";
+//<vbdeliver>:(" bring " | " carry " | " deliver "|" take ") " it to "<target>;
+<vbfind>:" find "|" look for ";
+<vbtake>:" grasp "|" get "|" take ";
+<talk>:" answer a question"|<tell>;
+<tell>:(" tell "|" say "|" speak ")(<time> | <date> | <name>);
+
+<target>:" me "|<personname> (" at " | " in  "|" which is in ")" the "<room>|" the "<room>;
+<object>:"Bath cream"|"Milk tea"|"Biscuits"|"Chips"|"Napkin"|"Oreo"|"Green tea"|"Pepsi"|"Herbal tea"|"Porridge"|"Jelly"|"milk"|"cola"|"water"|"lemon tea"|"green tea"|"toothpaste"|"napkins"|"tea"|"apple"|"lemon"|"biscuits"|"chips"|"chocolates";
+<room>:" kitchen "|" living room "|" bedroom "|" dining room "|<Q>;
+<name>:" your name "|"the name of your team";
+<time>:" the time "|" what time is it "|"the name of your team";
+<date>:"tell the date "|" what day is "(" today "|" tomorrow ")|"tell the day of the "(" month "|" week ");
+
+<YesOrNo>:
+"you are right"|"no";
+
+<Q>:
+"fridge"|"kitchen table"|"kitchen counter"|"cupboard"|"trashbin"|"bar"|"couch table"|"dinner table"|"sofa"|"left bedside table"|"right bedside table"|"desk"|"bed"|"bookcase"|"hallway table"|"hallway"|"shelf";
+
+
+

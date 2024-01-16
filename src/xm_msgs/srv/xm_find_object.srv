@@ -1,0 +1,7 @@
+string name
+string type
+string adj
+---
+geometry_msgs/PointStamped position
+string name
+string type

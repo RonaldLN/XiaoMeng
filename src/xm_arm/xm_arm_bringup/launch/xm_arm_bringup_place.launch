@@ -1,0 +1,10 @@
+<launch>
+    
+    <include file="$(find xm_arm_controller)/launch/xm_arm_controller.launch"/>
+    <include file="$(find xm_new_moveit_config)/launch/demo.launch"/>
+    <!-- <node pkg="xm_arm_serial" name="xm_arm_serial_gpsr" type="xm_arm_serial_gpsr.py" output="screen"/> -->
+    <!-- <node pkg="xm_arm_bringup" name="xm_arm_stack_server_gpsr" type="xm_arm_stack_server_gpsr.py" output="screen"/> -->
+    <node pkg="xm_arm_bringup" name="xm_arm_stack_server_place" type="xm_arm_stack_server_place.py" output="screen"/>
+    <node pkg="xm_arm_sim_hw" name="xm_arm_sim_hw" type="xm_arm_sim_hw.py" output="screen"/>
+    
+</launch>

@@ -1,0 +1,6 @@
+<package>
+  <description brief="xm第七代总装配体（URDF）">xm第七代总装配体（URDF）</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

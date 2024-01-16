@@ -1,0 +1,36 @@
+local_costmap:
+  global_frame: map                    #map
+  robot_base_frame: base_footprint                #base_footprint
+  update_frequency: 5.0 
+  publish_frequency: 10.0
+  #static_map: true
+  rolling_window: true
+  width: 5.5  # 6.0
+  height: 5.5  # 6.0
+  ########################################
+  inflation_radius: 0.15    #0.3  0.1
+  # 内切圆半径
+  inscribed_radius: 0.32  # 0.26
+  # 外切圆半径
+  circumscribed_radius: 0.35  #0.30
+  ########################################
+  
+  #  首先生成的网格图的长和宽
+  resolution: 0.05
+  transform_tolerance: 1.0
+
+  plugins:
+    - {name: static_layer,        type: "costmap_2d::StaticLayer"}
+    - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}
+        # 
+    #- {name: sonar_layer,   type: "range_sensor_layer::RangeSensorLayer"}            
+   # - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"} 
+    
+    - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
+
+  #sonar:
+   # enabled:  true
+    #topics: ["/mobile_base/UltraSoundPublisher"]  # 注意替换成自己的topic名字
+    #no_readings_timeout: 0.0
+
+    #topics: ["/UltraSoundPublisher"] 

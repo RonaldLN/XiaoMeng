@@ -1,0 +1,29 @@
+<launch>
+
+  <node pkg="move_base" type="move_base" respawn="true" name="move_base" launch-prefix="xterm -e" clear_params="true">
+<!--param name="use_dijkstra" value="false"/-->
+
+    <rosparam file="$(find xm_2dnav)/move_base_config/teb/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find xm_2dnav)/move_base_config/teb/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find xm_2dnav)/move_base_config/teb/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find xm_2dnav)/move_base_config/teb/global_costmap_params.yaml" command="load" />
+   <rosparam file="$(find xm_2dnav)/move_base_config/teb/teb_local_planner_params.yaml" command="load"  />
+    <rosparam file="$(find xm_2dnav)/move_base_config/costmap_conversion_params.yaml" command="load" />
+    <!--rosparam file="$(find xm_   <rosparam file="$(find xm_2dnav)/move_base_config/teb/.yaml" command="load"  />2dnav)/move_base_config/fake/base_local_planner_params.yaml" command=
+"load" /-->
+    <!--rosparam file="$(find xm_2dnav)/move_base_config/dwa_astar/local_planner_params.yaml" command="load" /-->
+    <!--rosparam file="$(find xm_2dnav)/move_base_config/fake/nav_obstacles_params.yaml" command="load" /-->
+
+		<param name="base_global_planner" value="global_planner/GlobalPlanner" />
+                <param name="use_dijkstra" value="false"/>
+                <param name="footprint_padding" value="0.05" />
+
+		<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+		<param name="controller_frequency" value="5.0" />
+		<param name="controller_patience" value="15.0" />
+
+    <remap from="/cmd_vel" to="/mobile_base/mobile_base_controller/cmd_vel"/>
+    <remap from="/odom"    to="/mobile_base/mobile_base_controller/odom"/>
+  </node>
+ 
+</launch>

@@ -1,0 +1,7 @@
+<node name="move_base" pkg="asr_move_base_base" type="move_base" respawn="false" output="screen">
+<param name="controller_frequency" value="5"/>
+<param name="planner_frequency" value="5"/>
+<param name="base_local_planner" value="ftc_local_planner/FTCPlanner" />
+<rosparam file="$(find xm_2dnav)/move_base_config/asr_ftc/global_costmap_params.yaml" command="load"/>
+<rosparam file="$(find xm_2dnav)/move_base_config/asr_ftc/ftc_local_planner_params.yaml" command="load"/>
+</node>

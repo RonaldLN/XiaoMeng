@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "cctype": "cpp",
+        "cmath": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp"
+    },
+    "python.autoComplete.extraPaths": [
+        "/home/zhaolin/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/home/zhaolin/ros_ws/devel/lib/python2.7/dist-packages",
+        "/home/zhaolin/catkin_ws4/devel/lib/python2.7/dist-packages",
+        "/home/zhaolin/urg_ws/devel/lib/python2.7/dist-packages",
+        "/home/zhaolin/catkin_ws3/install_isolated/lib/python2.7/dist-packages",
+        "/home/zhaolin/catkin_ws2/devel/lib/python2.7/dist-packages",
+        "/home/zhaolin/catkin_ws1/devel/lib/python2.7/dist-packages",
+        "/home/zhaolin/catkin_ws0/devel/lib/python2.7/dist-packages",
+        "/opt/ros/kinetic/lib/python2.7/dist-packages"
+    ]
+}

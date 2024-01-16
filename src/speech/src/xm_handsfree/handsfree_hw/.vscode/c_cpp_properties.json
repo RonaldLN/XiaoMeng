@@ -1,0 +1,56 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/zhaolin/catkin_ws/devel/include/**",
+                "/opt/ros/kinetic/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/amcl/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/base_local_planner/include/**",
+                "/home/zhaolin/catkin_ws/src/base_server/include/**",
+                "/home/zhaolin/catkin_ws/src/xm_controllers/base_simple_controller/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/carrot_planner/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/clear_costmap_recovery/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/costmap_2d/include/**",
+                "/home/zhaolin/catkin_ws/src/demo/include/**",
+                "/home/zhaolin/catkin_ws/src/hokuyo/driver_common/driver_base/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/dwa_local_planner/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/global_planner/include/**",
+                "/home/zhaolin/catkin_ws/src/xm_controllers/gripper_controller/include/**",
+                "/home/zhaolin/catkin_ws/src/handsfree_hw/include/**",
+                "/home/zhaolin/catkin_ws/src/hector_slam/hector_geotiff/include/**",
+                "/home/zhaolin/catkin_ws/src/hector_slam/hector_map_tools/include/**",
+                "/home/zhaolin/catkin_ws/src/hector_slam/hector_mapping/include/**",
+                "/home/zhaolin/catkin_ws/src/hector_slam/hector_marker_drawing/include/**",
+                "/home/zhaolin/catkin_ws/src/hokuyo/hokuyo_node/include/**",
+                "/home/zhaolin/catkin_ws/src/leg_tracker/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/map_server/include/**",
+                "/home/zhaolin/catkin_ws/src/xm_controllers/motor_controller/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/move_base/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/move_slow_and_clear/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/nav_core/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/navfn/include/**",
+                "/home/zhaolin/catkin_ws/src/slam_gmapping/openslam_gmapping/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/robot_pose_ekf/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/rotate_recovery/include/**",
+                "/home/zhaolin/catkin_ws/src/tf_l/include/**",
+                "/home/zhaolin/catkin_ws/src/hokuyo/driver_common/timestamp_tools/include/**",
+                "/home/zhaolin/catkin_ws/src/navigation/voxel_grid/include/**",
+                "/home/zhaolin/catkin_ws/src/xm_gazebo/include/**",
+                "/home/zhaolin/catkin_ws/src/xm_speech_for_linux/xm_speech/include/**",
+                "/home/zhaolin/catkin_ws/src/xm_velocity_smoother/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

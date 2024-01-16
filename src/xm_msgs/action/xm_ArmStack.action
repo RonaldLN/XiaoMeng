@@ -1,0 +1,12 @@
+#goal defin
+geometry_msgs/PointStamped target_camera_point
+float64 target_size_l
+float64 target_size_w
+float64 target_size_h
+float64 table_depth
+---
+#result defin
+bool result_bool
+---
+#feedback defin
+float64 feedback_bool

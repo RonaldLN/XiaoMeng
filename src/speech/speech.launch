@@ -1,0 +1,6 @@
+<launch>
+<node pkg="speech" name="tts_server" type="tts_server" respawn="true"/>
+<node pkg="speech" name="sr_online_file_server" type="sr_online_file_server" output="screen" respawn="true"/>
+<node pkg="speech" name="speech_core" type="speech_core.py" output="screen" respawn="true"/>
+<node pkg="speech" name="sr_offline_file_server" type="sr_offline_file_server" output="screen" respawn="true"/>
+</launch>

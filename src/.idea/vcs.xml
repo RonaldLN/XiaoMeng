@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/xm_navigation/navigation/teb_local_planner" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/xm_navigation/openslam_gmapping" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/xm_navigation/robot_pose_ekf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/xm_navigation/slam_gmapping" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/xm_vision/src/scripts" vcs="Git" />
+  </component>
+</project>

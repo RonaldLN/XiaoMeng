@@ -1,0 +1,16 @@
+FTCPlanner:
+    max_x_vel: 0.5
+    max_rotation_vel: 1.0
+    min_rotation_vel: 0.4
+    acceleration_x: 0.5
+    acceleration_z: 0.5
+    position_accuracy: 0.04
+    rotation_accuracy: 0.03
+    slow_down_factor: 2.5
+#This factor is only used for the brake of the rotation on the spot (Standing at the goal position and rotating at the beginning to the global plan orientation). To find the right value increase it in 0.1 steps and test if the robot brakes safely. If the robot halts too jerky, reduce the slow_down_factor. 
+    sim_time: 0.6 
+#Set the sim_time to max_x_vel * sim_time = robot diameter/2 +- some centimeter. If you increase the sim_time the robot will drive less accurate along the global plan and cutting curves (drives smaller curves than wanted). If the sim_time is too small, it could be that the robot stops driving and turns on the spot to the global plan orientation. Also a good setting for the sim_time is max_x_vel * sim_time = length of the smallest curve/2. So the robot drives accurately around small curves in your enviroment.
+    local_planner_frequence: 5
+    join_obstacle: false
+
+

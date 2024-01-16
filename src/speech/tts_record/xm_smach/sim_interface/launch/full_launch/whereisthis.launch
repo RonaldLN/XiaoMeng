@@ -1,0 +1,15 @@
+<launch>
+	
+	<include file="$(find sim_interface)/launch/xm_hw_interface.launch" />
+
+	<node pkg="xm_speech" name="xm_speech" type="xm_speech_simulation.py" output="screen">
+	</node>
+	
+	<include file="$(find xm_arm_bringup)/launch/xm_arm_bringup.launch">
+        <arg name="rviz" value = "false"/>
+	</include>
+
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find sim_interface)/rviz/whoiswho.rviz" required="true" />
+
+	
+</launch>

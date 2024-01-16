@@ -1,0 +1,109 @@
+[
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw_node.dir/src/main.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/src/main.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/src/main.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw_node.dir/src/transport_serial.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/src/transport_serial.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/src/transport_serial.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw_node.dir/include/sdk/LIB_HF_Link/hf_link.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/include/sdk/LIB_HF_Link/hf_link.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/include/sdk/LIB_HF_Link/hf_link.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw_node.dir/src/hf_hw.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/src/hf_hw.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/src/hf_hw.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw_node.dir/src/hf_hw_ros.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/src/hf_hw_ros.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/src/hf_hw_ros.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw.dir/src/main.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/src/main.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/src/main.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw.dir/src/transport_serial.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/src/transport_serial.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/src/transport_serial.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw.dir/include/sdk/LIB_HF_Link/hf_link.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/include/sdk/LIB_HF_Link/hf_link.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/include/sdk/LIB_HF_Link/hf_link.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw.dir/src/hf_hw.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/src/hf_hw.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/src/hf_hw.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/handsfree_hw.dir/src/hf_hw_ros.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/src/hf_hw_ros.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/src/hf_hw_ros.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DCONFIG_PATH=\\\"/home/rainney/catkin_ws/src/handsfree_hw\\\" -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"handsfree_hw\\\" -I../include -I../include/sdk/LIB_HF_Link -I../include/sdk/LIB_Robot_Abstract -I/home/rainney/catkin_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/testvelocity.dir/src/testvelocity.cpp.o -c /home/rainney/catkin_ws/src/handsfree_hw/src/testvelocity.cpp",
+  "file": "/home/rainney/catkin_ws/src/handsfree_hw/src/testvelocity.cpp"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_main_EXPORTS -I/usr/src/googletest/googlemock/include -I/usr/src/googletest/googlemock -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o gtest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc",
+  "file": "/usr/src/googletest/googletest/src/gtest-all.cc"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_main_EXPORTS -I/usr/src/googletest/googlemock/include -I/usr/src/googletest/googlemock -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o gtest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o -c /usr/src/googletest/googlemock/src/gmock-all.cc",
+  "file": "/usr/src/googletest/googlemock/src/gmock-all.cc"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_main_EXPORTS -I/usr/src/googletest/googlemock/include -I/usr/src/googletest/googlemock -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o gtest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /usr/src/googletest/googlemock/src/gmock_main.cc",
+  "file": "/usr/src/googletest/googlemock/src/gmock_main.cc"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_EXPORTS -I/usr/src/googletest/googlemock/include -I/usr/src/googletest/googlemock -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o gtest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc",
+  "file": "/usr/src/googletest/googletest/src/gtest-all.cc"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_EXPORTS -I/usr/src/googletest/googlemock/include -I/usr/src/googletest/googlemock -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /usr/src/googletest/googlemock/src/gmock-all.cc",
+  "file": "/usr/src/googletest/googlemock/src/gmock-all.cc"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgtest_main_EXPORTS -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /usr/src/googletest/googletest/src/gtest_main.cc",
+  "file": "/usr/src/googletest/googletest/src/gtest_main.cc"
+},
+
+{
+  "directory": "/home/rainney/catkin_ws/src/handsfree_hw/build",
+  "command": "/usr/bin/g++-7  -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgtest_EXPORTS -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc",
+  "file": "/usr/src/googletest/googletest/src/gtest-all.cc"
+}
+]

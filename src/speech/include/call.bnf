@@ -1,0 +1,97 @@
+﻿#BNF+IAT 1.0 UTF-8;
+/*
+Attention:
+1.the tokens in the slot must be simply parallel,no complicated rules like "()","[]","<>"
+2.the num of rule |,such as:<rule0>|<rule1>|<rule2> is OK,too many is illegal,then make them in slot
+*/
+!grammar GPSR;
+
+!slot <action>;
+!slot <object>;
+!slot <room>;
+
+!start <root>;
+<root>:
+("please") "follow me" |
+("the") <object> ("is" | "are") "on the" ("left" | "right") |
+<action> "the" <object> |
+<action> "the" <object> "which" ("is" | "are") "on the" ("left" | "right") |
+("please") "stop" ("here") |
+<action> "the" <object>  ("to me") |
+<action> "me the" <object> |
+"i want" ("the") <object> |
+"you are" ("wrong" | "right") |
+"go to the" <room>;
+
+<action>:"remember"|"memorize"|"stop"|"follow"|"give"|"deliver"|"get";
+<object>:"noodles"|"sausage"|"apple"|"orange"|"pringle"|"cracker";
+<room>:"kitchen"|"living room"|"dining room"|"bedroom"|"corridor";
+/*
+<talk> "to the person" <gesture> "in the" <room>|
+<findp> "in the" <room> "and" <talk>|
+<goroom> "and" <findp> "and" <talk>|
+"Tell me the" ("name" | "gender" | "pose") "of the person" ("at the" <beacon> | "in the" <room>)|
+"tell me how many people in the" <room> "are" (<pgenderp> | <pose>)|
+"Tell me how many" (<object>|<category>) "there are on the" <placement>|
+"Tell me what's the" <oprop> ("object"|<category>) "on the" <placement>;
+
+"tell me which are the three" <oprop> ("objects" | <category>) "on the" <placement>|
+<vbfind> "the" (<object>|<category>) "in the" <room>|
+<vbguide> <name> "from the" <beacon> "to the" <beacon>|
+"meet" <name> "at the" <beacon> "and" <vbguide> <pron> "to the" <beacon>|
+<gobeacon> "and meet" <name> "and" <vbguide> <pron> "to the" <beacon>|
+<vbguide> <name> "to the" <beacon> "and you" ("may" | "can" | "will") "find" <pron> "at the" <beacon>|
+<vbfollow> <name> "from the" <beacon> "to the" <room>|
+"meet" <name> "at the" <beacon> "and" <vbfollow> <pron> "to the" <room> |
+<gobeacon> "and meet" <name> "and" <vbfollow> <pron> "to the" <room>|
+"meet" <name> "at the" <beacon> "and" <vbfollow> <pron> "and" (<goroom>|<vbguide> <pron> "back")|
+
+<vbbtake> "the" <object> "from the" <room> "to the" <placement>|
+<vbbring> "me the" <object> "from the" <placement>|
+<vbtake> "the" <object> "from the" <placement> "and" (<vbdeliver> "it to me" | <vbdeliver> "it to" <name> "at the" <beacon>)|
+<vbtake> "the" <object> "from the" <placement> "and" <vbplace> "it on the" <placement>|
+<vbtake> "the" <object> "and" <vbplace> "it on the" <placement>|
+<vbbtake> "my" <luggage> "to the" <taxi>|
+<vbplace> "the" <object> "on the" <placement>|
+<vbbring> "me the" <object>|
+<vbdeliver> "the" <object> "to" ("me"|"the person" <gesture> "in the" <room>)|
+<vbtake> "the" <object> "from the" <placement> "and" <vbplace> "it on the" <placement>|
+<goplace> "and" <vbfind> "the" <object> "and" (<vbdeliver> "it to me" | <vbdeliver> "it to" <name> "at the" <beacon>)|
+<goplace> "and" <vbfind> "the" <object> "and" <vbplace> "it on the" <placement>;
+
+
+<talk>: "answer a question" | <vbspeak> <whattosay>;
+<findp>:<vbfind> ("a" <pgenders>| "a person" <gesture>|"a person" <pose>);
+<goroom>:<vbgopl> "to the" <room>;
+<gobeacon>:<vbgopl> "to the" <beacon>;
+<goplace>:<vbgopl> "to the" <placement>;
+<whattosay>:"something about yourself"|"the time";
+
+<polite>:"Please"|"Could you"|"Robot please"|"Could you please";
+<pgenders>:"man" | "woman" | "boy" | "girl" | "male person" | "female person";
+<pgenderp>:"men" | "women" | "boys" | "girls" | "male" | "female";
+<pose>:"sitting" | "standing" | "lying down";
+<oprop>:"biggest" | "largest" | "smallest" | "heaviest" | "lightest" | "thinnest";
+<pron>:"him"|"her"|"it";
+<luggage>:"bag" | "baggage" | "valise" | "suitcase" | "trolley";
+<taxi>:"taxi" | "cab" | "uber";
+
+<vbbtake>:"bring" | "take";
+<vbplace>:"put" | "place";
+<vbbring>:"bring" | "give";
+<vbdeliver>:"bring" | "give" | "deliver";
+<vbtake>:"get" | "grasp" | "take" | "pick up";
+<vbspeak>:"tell" | "say";
+<vbgopl>:"go" | "navigate";
+<vbfind>:"find" | "locate" | "look for";
+<vbguide>:"guide" | "escort" | "take" | "lead" | "accompany";
+<vbfollow>:"follow";
+
+<name>:"alex"|"charlie"|"elizabeth"|"francis"|"jennifer"|"linda"|"mary"|"patricia"|"robin"|"skyler"|"james"|"john"|"michael"|"robert"|"william";
+<object>:"cloth"|"scrubby"|"sponge"|"cascade pod"|"tray"|"basket"|"bag"|"fork"|"knife"|"spoon"|"chocolate drink"|"coke"|"grape juice"|"orange juice"|"sprite"|"cereal"|"noodles"|"sausages"|"apple"|"orange"|"paprika"|"pringles"|"crackers"|"potato chips"|"dish"|"bowl"|"cup";
+<category>:"cleaning_stuff"|"containers"|"cutlery"|"drinks"|"food"|"fruits"|"snacks"|"tableware";
+<room>:"kitchen"|"living_room"|"dining_room"|"bedroom"|"corridor";
+<beacon>:"entrance"|"bed"|"desk"|"dining_table"|"exit"|"couch"|"end_table"|"bookcase"|"sink"|"dishwasher";
+<placement>:"side_table"|"desk"|"dining_table"|"end_table"|"bookcase"|"cupboard"|"storage_table"|"sink"|"counter";
+<gesture>:"waving"|"raising their left arm"|"raising their right arm"|"pointing to the left"|"pointing to the right";
+*/

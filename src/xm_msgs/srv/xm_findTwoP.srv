@@ -1,0 +1,6 @@
+string object_name
+int32 people_id
+int32 flag
+
+---
+xm_msgs/xm_Object[] object

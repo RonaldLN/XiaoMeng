@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster0" args="0.2356 0.1485 -0.057 0 0 0 1 base_link ultrasonic0_link 20" />   
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster1" args="0.2356 0.1215 -0.05675 0 0 0 1 base_link ultrasonic1_link 20" />   
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster2" args="0.2356 0.0945 -0.05675 0 0 0 1 base_link ultrasonic2_link 20" />    
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster3" args="0.2356 0.0675 -0.05675 0 0 0 1 base_link ultrasonic3_link 20" />  
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster4" args="0.2356 0.0405 -0.05675 0 0 0 1 base_link ultrasonic4_link 20" />   
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster5" args="0.2356 0.0135 -0.05675 0 0 0 1 base_link ultrasonic5_link 20" />  
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster6" args="0.2356 -0.0135 -0.05675 0 0 0 1 base_link ultrasonic6_link 20" />    
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster7" args="0.2356 -0.0405 -0.05675 0 0 0 1 base_link ultrasonic7_link 20" />   
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster8" args="0.2356 -0.0675 -0.05675 0 0 0 1 base_link ultrasonic8_link 20" />    
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster9" args="0.2356 -0.0945 -0.05675 0 0 0 1 base_link ultrasonic9_link 20" />   
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster10" args="0.2356 -0.1215 -0.05675 0 0 0 1 base_link ultrasonic10_link 20" />   
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster11" args="0.2356 -0.1485 -0.05675 0 0 0 1 base_link ultrasonic11_link 20" />   
+
+
+<!--
+<node pkg="tf" type="static_transform_publisher" name="test_tf_broadcaster" args="0 0 0 0 0 0 1 base_footprint base_link 100" />  -->  <!--100为10Hz-->
+
+</launch>

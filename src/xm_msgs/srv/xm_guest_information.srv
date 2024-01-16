@@ -1,0 +1,5 @@
+int32 num
+---
+geometry_msgs/PointStamped position
+string name
+string type

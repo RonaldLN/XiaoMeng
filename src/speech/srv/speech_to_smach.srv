@@ -1,0 +1,10 @@
+uint8 command
+string text
+---
+uint8 num
+string[] action
+string[] object
+string answer
+string gesture
+string name
+string drink

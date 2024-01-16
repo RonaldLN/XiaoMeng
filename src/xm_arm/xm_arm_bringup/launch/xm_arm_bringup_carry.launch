@@ -1,0 +1,13 @@
+<launch>
+    <include file="$(find xm_arm_controller)/launch/xm_arm_controller.launch"/>
+    <include file="$(find xm_moveit_config)/launch/demo.launch"/>
+    <!-- <node pkg="xm_arm_bringup" name="xm_arm_stack_server_catch_pre" type="xm_arm_stack_server_catch_pre.py" output="screen"/> -->
+    <node pkg="xm_arm_sim_hw" name="xm_arm_sim_hw" type="xm_arm_sim_hw.py" output="screen"/>
+    <!-- <node pkg="xm_arm_serial" name="xm_arm_serial_carry" type="xm_arm_serial_carry.py" output="screen"/> -->
+    <!-- <node pkg="xm_arm_serial" name="xm_arm_serial_carry_old" type="xm_arm_serial_carry_old.py" output="screen"/> -->
+    <node pkg="xm_arm_bringup" name="xm_arm_stack_server_catch" type="xm_arm_stack_server_catch.py" output="screen"/>
+    <!-- <node pkg="xm_arm_nav" name="use_arm_stack" type="use_arm_stack.py" output="screen"/> -->
+
+
+
+</launch>

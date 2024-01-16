@@ -1,0 +1,6 @@
+uint8 operation
+uint8 people_id
+---
+uint8 message
+geometry_msgs/PointStamped pos
+uint8 age

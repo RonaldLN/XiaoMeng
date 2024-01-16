@@ -1,0 +1,72 @@
+DWAPlannerROS:
+
+ use_dwa: true
+ odom_topic: odom
+ map_frame: /odom
+
+#不要的参数值就注释，切记不能为空
+#Robot Configuration Parameters   
+ acc_lim_x: 0.7       #(double, default: 2.5)  m/s^2 速度和加速度上限过低可能使使机器人找不到路径 5
+ acc_lim_y: 0.7         #(double, default: 2.5)  m/s^2
+ acc_lim_trans: 0.7
+ acc_lim_theta: 1.0    #(double, default: 3.2)  rad/s^2 5
+ max_trans_vel: 0.64    #(double, default: 0.55) m/s  3
+ min_trans_vel: -0.45   #(double, default: 0.1)  m/s
+ max_vel_x: 0.55       #(double, default: 0.55) m/s  3
+ min_vel_x: -0.2       #(double, default: 0.0)  m/s 如果速度不小于0，机器人就不会后退
+ max_vel_y: 0.4          #(double, default: 0.1)  m/s
+ min_vel_y: -0.4          #(double, default: -0.1) m/s
+ max_rot_vel: 0.7        #(double, default: 1.0)  rad/s  5
+ min_rot_vel: 0.05      #(double, default: 0.4)  rad/s
+ 
+#Goal Tolerance Parameters 
+ yaw_goal_tolerance: 0.05 #(double, default: 0.05) 加大机器人就不那么容易在墙角时爆出rotation error
+ xy_goal_tolerance: 0.05  #(double, default: 0.10)
+ latch_xy_goal_tolerance:  true   #(bool, default: false)
+
+ #Forward Simulation Parameters
+ sim_time: 1.7         #(double, default: 1.7) seconds 1.0
+ sim_granularity: 0.1    #(double, default: 0.025) meters轨迹上点之间的步长
+ angular_sim_granularity: 0.1
+ 
+ #The number of samples to use when exploring the x velocity space
+ vx_samples: 3         #(integer, default: 3)
+ #The number of samples to use when exploring the y velocity space
+ vy_samples: 10         #(integer, default: 10) 
+ #The number of samples to use when exploring the theta velocity space
+ vth_samples: 20       #(integer, default: 20)
+ controller_frequency: 10       #(double, default: 20.0)  
+ planner_frequency: 0.0 #全局路径规划的频率，为0即只规划一次
+ controller_patience: 2.0
+ planner_patience: 3.0
+#Trajectory Scoring Parameters
+ #The weighting for how much the controller should stay close to the path it was given
+ #较大的值将使本地规划器更倾向于跟踪全局路径
+ path_distance_bias: 90.0         #(double, default: 32.0) #加大一点机器人不那么容易卡死在进门的地方80
+ #The weighting for how much the controller should attempt to reach its local goal, also controls speed
+ #机器人尝试到达目标点的权重。实验显示（网上的）增加goal_distance_bias值将会使机器人与全局路径的一致性偏低
+ #减得太小似乎机器人更加容易abort 20.5
+ goal_distance_bias: 24.0         #(double, default: 24.0)
+#达到局部目标点的权重参数，也用来控制速度。权重如果设置为0表示要求完全到达目标点，这会导致机器人走动缓慢和震荡的现象，因为要求达到目标点的精度太高，所对机器人的控制比较苛刻
+ #The weighting for how much the controller should attempt to avoid obstacles
+ #occdist_scale是机器人尝试躲避障碍物的权重，这个值偏大将导致机器人陷入困境。
+ occdist_scale: 0.02            #(double, default: 0.01) #0.015
+ forward_point_distance: 0.325     #(double, default: 0.325)
+ twirling_scale: 1.0             #The weight for penalizing any changes in robot heading
+ #The amount of time that the robot must stop before a collision in order for a trajectory to be considered valid in seconds 
+ stop_time_buffer: 1.0           #(double, default: 0.2) 0.2
+ trans_stopped_vel: 0.04
+ rot_stopped_vel: 0.05
+ #The absolute value of the velocity at which to start scaling the robot's footprint, in m/s
+ scaling_speed: 0.25            #(double, default: 0.25) 
+
+#Oscillation Prevention Parameters
+ oscillation_reset_dist: 0.1    #(double, default: 0.05)   
+ 
+ oscillation_timeout: 3.0 #oscillation_timeout秒机器人仍卡在方圆oscillation_distance内则认定机器人为震荡状态
+ oscillation_distance: 0.5
+#Global Plan Parameters
+ prune_plan: true                #(bool, default: true)
+ #
+ reset_distance: 0.5 #清除代价地图
+ conservative_reset_dist: 3.0

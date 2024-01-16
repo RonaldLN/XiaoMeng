@@ -1,0 +1,4 @@
+TrajectoryPlannerROS:
+  max_vel_x: 0.3        # 线速度减小来适应障碍物
+  pdist_scale: 0.8      # 局部路径更靠近全局路径   路径权重加大
+  gdist_scale: 0.4      # 距离权重较小

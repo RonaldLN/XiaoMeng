@@ -1,0 +1,30 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_footprint
+  update_frequency: 5.0
+  publish_frequency: 10.0
+  #是否使用静态地图层
+  static_map: true
+  inflation_radius: 1.0
+  cost_scaling_factor: 3.0
+
+  transform_tolerance: 0.5
+  plugins:
+
+    - {name: static_layer,            type: "costmap_2d::StaticLayer"}
+      
+    #- {name: sonar_layer,             type: "range_sensor_layer::RangeSensorLayer"} 
+    - {name: obstacle_layer,          type: "costmap_2d::VoxelLayer"}
+      
+    # - {name: simplelayer,             type: "simple_layer_namespace::SimpleLayer"} 
+    - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
+    
+
+  #sonar_layer:
+  #  enabled:  true
+  #  topics: ["/mobile_base/UltraSoundPublisher"]  # 注意替换成自己的topic名字
+  #  no_readings_timeout: 0.0
+    #topics: ["/UltraSoundPublisher"] 
+
+
+

@@ -1,0 +1,11 @@
+mobile_base:
+  xm_arm_controller:
+  #机械臂控制器
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - arm_joint_4
+      - arm_joint_3
+      - arm_joint_1
+      - arm_joint_0
+      - arm_joint_2
+      - arm_joint_5

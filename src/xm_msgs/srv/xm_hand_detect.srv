@@ -1,0 +1,4 @@
+bool operation
+---
+geometry_msgs/PointStamped pos1
+geometry_msgs/PointStamped pos2

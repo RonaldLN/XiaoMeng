@@ -1,0 +1,8 @@
+uint8 command
+---
+uint8 num
+string[] action
+string[] target
+string[] name
+string[] object
+string answer
